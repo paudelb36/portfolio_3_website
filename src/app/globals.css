@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-sage-50: #f2f5f1;
+  --color-sage-100: #e6ece3;
+  --color-sage-200: #d4dfcf;
+  --color-sage-300: #b9c7b2;
+  --color-sage-400: #9fb298;
+  --color-sage-500: #7d8f78;
+  --color-sage-600: #6b7f64;
+  --color-sage-700: #5c7057;
+  --color-sage-800: #495a46;
+  --color-sage-900: #3f4e3b;
+  --color-ink: #0f0f0f;
+  --color-cream: #faf9f7;
+  --shadow-card: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+:root { --page-max: 1100px; }
+
+html, body { height: 100%; }
+html { scroll-behavior: smooth; }
+
+.container-page {
+  max-width: var(--page-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  background: var(--color-sage-50);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.section-tight {
+  background: var(--color-cream);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.frame {
+  border: 10px solid var(--color-sage-600);
+  border-radius: 0.75rem;
+}
+
+.h-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 75%;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+}
+.h-scroll > * { scroll-snap-align: start; }
+
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.big-title { font-weight: 800; letter-spacing: -0.02em; }
+
+.font-display { font-family: var(--font-display); }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee { min-width: 200%; display: inline-flex; animation: marquee 12s linear infinite; }
