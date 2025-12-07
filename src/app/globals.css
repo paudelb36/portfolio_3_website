@@ -72,3 +72,37 @@ html { scroll-behavior: smooth; }
   100% { transform: translateX(-50%); }
 }
 .marquee { min-width: 200%; display: inline-flex; animation: marquee 12s linear infinite; }
+
+@keyframes spin-smooth {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-smooth { animation: spin-smooth 1.2s linear infinite; }
+
+/* BP stroke draw animation */
+@keyframes bp-draw {
+  0% { stroke-dashoffset: 1; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes bp-fade {
+  0% { stroke-opacity: 0; }
+  100% { stroke-opacity: 1; }
+}
+.bp-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  stroke-opacity: 0;
+  animation: bp-draw 0.9s ease-out forwards, bp-fade 0.3s ease-out forwards 0.9s;
+}
+.bp-delay {
+  animation: bp-draw 0.9s ease-out forwards 0.9s, bp-fade 0.3s ease-out forwards 1.8s;
+}
+
+@keyframes bp-reveal {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+.bp-clip { transform-box: fill-box; transform-origin: left center; will-change: transform; }
+
+@keyframes preloader-blink { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+.preloader-blink-twice { animation: preloader-blink 180ms ease-in-out 2; }

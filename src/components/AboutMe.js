@@ -62,7 +62,7 @@ export default function AboutMe() {
             <div>
               <div className="font-medium">Bachelor in Computer Application</div>
               <div className="text-sage-600">Tribhuvan University • 2021 – Present</div>
-              <div className="mt-2">Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering</div>
+              {/* <div className="mt-2">Relevant coursework: Data Structures, Algorithms, Web Development, Database Systems, Software Engineering</div> */}
             </div>
             <div>
               <div className="font-medium">Milestone International College</div>

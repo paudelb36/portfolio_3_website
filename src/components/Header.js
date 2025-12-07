@@ -6,14 +6,13 @@ import Menu from "./Menu";
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="section flex items-center justify-between">
+    <header id="home" className="section flex items-center justify-between">
       <a href="/" className="text-xl font-semibold font-display">
         <div className="w-10 md:w-16 h-10 md:h-16 rounded-full bg-sage-600 text-white text-xl font-semibold grid place-items-center">
           BP
         </div>
       </a>
       <div className="flex items-center gap-4">
-        {/* <span className="text-xl text-sage-700">Menu</span> */}
         <button
           aria-label="Open menu"
           onClick={() => setOpen(true)}

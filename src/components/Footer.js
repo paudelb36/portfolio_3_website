@@ -29,6 +29,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="mt-6 flex justify-center">
+          <a href="#home" aria-label="Back to top" className="group inline-flex items-center gap-2 px-2 py-2 rounded-full bg-sage-600 text-white hover:bg-sage-700 transition-colors">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="opacity-90 group-hover:opacity-100"><path d="M12 4l-7 7h4v7h6v-7h4l-7-7z"/></svg>
+          </a>
+        </div>
       </div>
     </footer>
   )

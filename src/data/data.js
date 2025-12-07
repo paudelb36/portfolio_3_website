@@ -265,7 +265,7 @@ export const currentStory = {
       type: "status"
     }
   ],
-  skills: ["React", "Next.js", "PHP", "MySQL", "Tailwind CSS"],
+  skills: ["React", "Wordpress", "PHP", "MySQL", "Tailwind CSS"],
   location: "Bhaktapur, Nepal",
   timezone: "NPT (UTC+5:45)"
 };
